@@ -3,6 +3,7 @@
 - Ubuntu : 20.04.6 LTS
 - Python : v3.9.11
 - Anaconda3 : v23.7.4
+- cuda : v11.8
 ---
 ## How to use
 **1. Create conda env**
@@ -21,5 +22,5 @@ pip install -r requirements
 -> You can run Data,Tensor,Pipeline Parallel train code in DDP, DTP, DPP folder
 ```
 cd DDP #DTP, DPP
-deepspeed --num_gpus=2 ../train.py
+deepspeed --num_gpus=2 ../train.py # you can choose num_gpus you have
 ```
