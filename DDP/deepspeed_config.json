@@ -1,0 +1,25 @@
+{
+    "train_batch_size": 16,
+    "gradient_accumulation_steps": 1,
+    "zero_optimization": {
+        "stage": 2,  # ZeRO stage 2 (파라미터 및 옵티마이저 상태를 분할)
+        "offload_optimizer": {
+            "device": "cpu",  # 옵티마이저 상태를 CPU에 오프로드
+            "pin_memory": true
+        },
+        "offload_param": {
+            "device": "cpu",  # 모델 파라미터를 CPU에 오프로드
+            "pin_memory": true
+        }
+    },
+    "fp16": {
+        "enabled": true  # 혼합 정밀도 학습을 활성화
+    },
+    "zero_allow_untested_optimizer": true,
+    "gradient_checkpointing": true,  # 메모리 절약을 위한 그래디언트 체크포인팅
+    "activation_checkpointing": {
+        "partition_activations": true,
+        "contiguous_memory_optimization": true
+    }
+}
+

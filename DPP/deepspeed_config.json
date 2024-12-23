@@ -1,0 +1,29 @@
+{
+  "train_batch_size": 16,
+  "gradient_accumulation_steps": 1,
+  "zero_optimization": {
+    "stage": 2,
+    "offload_optimizer": {
+      "device": "cpu",
+      "pin_memory": true
+    },
+    "offload_param": {
+      "device": "cpu",
+      "pin_memory": true
+    }
+  },
+  "fp16": {
+    "enabled": true
+  },
+  "pipeline": {
+    "activation_checkpointing": {
+      "partition_activations": true,
+      "contiguous_memory_optimization": true
+    },
+    "micro_batch_size": 2,  # 각 GPU에서 처리할 마이크로 배치 크기
+    "num_stages": 2         # 파이프라인 단계 수 (여러 GPU에서 각 단계 수행)
+  },
+  "zero_allow_untested_optimizer": true,
+  "gradient_checkpointing": true
+}
+
