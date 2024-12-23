@@ -16,8 +16,8 @@
     "enabled": true
   },
   "tensor_parallel": {
-    "enabled": true,  # 텐서 병렬화 활성화
-    "tp_degree": 2    # 텐서 병렬화 정도 (몇 개의 GPU로 분할할지 설정)
+    "enabled": true,  
+    "tp_degree": 2  
   },
   "zero_allow_untested_optimizer": true,
   "gradient_checkpointing": true

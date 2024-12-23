@@ -20,8 +20,8 @@
       "partition_activations": true,
       "contiguous_memory_optimization": true
     },
-    "micro_batch_size": 2,  # 각 GPU에서 처리할 마이크로 배치 크기
-    "num_stages": 2         # 파이프라인 단계 수 (여러 GPU에서 각 단계 수행)
+    "micro_batch_size": 2,  
+    "num_stages": 2         
   },
   "zero_allow_untested_optimizer": true,
   "gradient_checkpointing": true
