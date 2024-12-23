@@ -9,6 +9,7 @@
 **1. Create conda env**
 ```
 conda create --name DeepSpeed python=3.9.11
+conda activate DeepSpeed
 ```
 **2. Install pytorch**
 ```
